@@ -1,7 +1,7 @@
-from compare import *
 from behave import *
+from compare import *
 
-from behave_bdt.behave_task_04.customer_search.features.steps import utils
+from ..utils import utils
 
 
 @given(u'I send the client name {client_name} to make a Search')
@@ -9,7 +9,7 @@ def step_impl(context, client_name):
     context.client_name =client_name
     context.client_id_result = utils.get_client_id(client_name)
 
-@given(u'I send the the Client ID {client_id}')
+@given(u'I send the Client ID {client_id}')
 def step_impl(context, client_id):
     context.client_id = int(client_id)
     context.client_name_result = utils.client_list[client_id]

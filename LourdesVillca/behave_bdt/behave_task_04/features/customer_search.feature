@@ -2,7 +2,7 @@ Feature: customer search
 
   Scenario Outline: Search a total priced for a list of clients
     Given I send the client name <ClientName> to make a Search
-    And  I send the the Client ID <Id>
+    And  I send the Client ID <Id>
     When I press the "Search" option
     Then I should see the total purchase price <Price>
     Examples:
